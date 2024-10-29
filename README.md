@@ -1,6 +1,62 @@
 # haarpsi-pytorch
-This is a Python PyTorch implementation of the HaarPSI algorithm as presented in "A Haar wavelet-based perceptual similarity index for image quality assessment" by Rafael Reisenhofer, Sebastian Bosse, Gitta Kutyniok and Thomas Wiegand.
+This is the repository of the HaarPSI PyTorch implementation presented in the paper "Parameter choices in HaarPSI for IQA with medical images".
 
-Converted by Sören Dittmer and Clemens Karner (through project FWF T1307-N/Anna Breger) from the original Python tensorflow implementation written by David Neumann and from the original MATLAB implementation written by Rafael Reisenhofer.
+### Highlights:
+1. A full-reference IQA measure with promising performance in several studies.
+2. It allows adaption to different data sources by adapting the parameters $C$ and $\alpha$.
+3. The original parameters for natural image data sets and new parameters for medical image data sets are provided.
 
-Please note that this implementation requires images scaled to [0,1], while the original implementation expects images with image values in [0,255].
+HaarPSI is Haar wavelet based full reference image quality assessment (FR-IQA) measure as presented in "A Haar wavelet-based perceptual similarity index for image quality assessment" by Rafael Reisenhofer, Sebastian Bosse, Gitta Kutyniok and Thomas Wiegand.
+
+This repository contains Python PyTorch HaarPSI implementation by Sören Dittmer, Clemens Karner and Anna Breger (through project FWF T1307-N/Anna Breger) based on the original Python TensorFlow implementation written by David Neumann and on the original MATLAB implementation written by Rafael Reisenhofer.
+
+
+If you use this HaarPSI implementation, please cite those two papers:
+
+```
+@InProceedings{breger2024study,
+      title={A study on the adequacy of common IQA measures for medical images}, 
+      author={Anna Breger and Clemens Karner and Ian Selby and Janek Gröhl and Sören Dittmer and Edward Lilley and Judith Babar and Jake Beckford and Timothy J Sadler and Shahab Shahipasand and Arthikkaa Thavakumar and Michael Roberts and Carola-Bibiane Schönlieb},
+      year={2024},
+      pages={accepted},
+      eventtitle={Medical Imaging and Computer-Aided Diagnosis (MICAD) 2024},
+      venue={Manchester, UK}
+}
+```
+
+
+```
+@misc{karner2024parameter,
+      title={Parameter choices in HaarPSI for IQA with medical images}, 
+      author={Clemens Karner, Janek Gröhl, Ian Selby, Judith Babar, Jake Beckford, Thomas R Else, Timothy J Sadler, Shahab Shahipasand, Arthikkaa Thavakumar, Michael Roberts, James H.F. Rudd, Carola-Bibiane Schönlieb, Jonathan R Weir-McCall, Anna Breger},
+}
+```
+
+### Installation:
+
+Tested with:
+* Python 3.11.5
+* Pytorch 2.5.1
+
+Example:
+
+```python
+from haarpsi import haarpsi
+import torch
+
+#Please note that this implementation requires images scaled to [0,1].
+ImgA=torch.ones(100, 100)
+ImgB=torch.ones(100, 100)
+
+#  Choose the parameter C in the range [5,100], suggested values:
+#  Natural images: 30
+#  Medical images: 5
+C=5
+
+#  Choose the parameter alpha in the range [2,8], suggested values:
+#  Natural images: 4,2
+#  Medical images: 5.8
+Alpha=5.8
+
+(Similarity_score, Local_similarity, Weights)=haarpsi(ImgA,ImgB,C,Alpha)
+```
