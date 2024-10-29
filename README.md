@@ -1,4 +1,4 @@
-# haarpsi-pytorch
+# HaarPSI PyTorch
 This is the repository of the HaarPSI PyTorch implementation presented in the paper "Parameter choices in HaarPSI for IQA with medical images".
 
 ### Highlights:
