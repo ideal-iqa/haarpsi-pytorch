@@ -1,14 +1,14 @@
 # HaarPSI PyTorch
-This is the repository of the HaarPSI PyTorch implementation presented in the paper "Parameter choices in HaarPSI for IQA with medical images".
+This is the repository of the HaarPSI PyTorch implementation presented in the papers "A study on the adequacy of common IQA measures for medical images" and "Parameter choices in HaarPSI for IQA with medical images".
 
 ### Highlights:
 1. A full-reference IQA measure with promising performance in several studies.
 2. It allows adaption to different data sources by adapting the parameters $C$ and $\alpha$.
 3. The original parameters for natural image data sets and new parameters for medical image data sets are provided.
 
-HaarPSI is Haar wavelet based full reference image quality assessment (FR-IQA) measure as presented in "A Haar wavelet-based perceptual similarity index for image quality assessment" by Rafael Reisenhofer, Sebastian Bosse, Gitta Kutyniok and Thomas Wiegand.
+HaarPSI is a Haar wavelet based full reference image quality assessment (FR-IQA) measure as presented in "A Haar wavelet-based perceptual similarity index for image quality assessment" by Rafael Reisenhofer, Sebastian Bosse, Gitta Kutyniok and Thomas Wiegand.
 
-This repository contains Python PyTorch HaarPSI implementation by Sören Dittmer, Clemens Karner and Anna Breger (through project FWF T1307-N/Anna Breger) based on the original Python TensorFlow implementation written by David Neumann and on the original MATLAB implementation written by Rafael Reisenhofer.
+This repository contains a Python PyTorch HaarPSI implementation based on the original Python TensorFlow implementation written by David Neumann and on the original MATLAB implementation written by Rafael Reisenhofer.
 
 
 If you use this HaarPSI implementation, please cite those two papers:
@@ -20,6 +20,7 @@ If you use this HaarPSI implementation, please cite those two papers:
       year={2024},
       pages={accepted},
       eventtitle={Medical Imaging and Computer-Aided Diagnosis (MICAD) 2024},
+      series={Springer Lecture Notes in Electrical Engineering},
       venue={Manchester, UK}
 }
 ```
