@@ -1,5 +1,5 @@
 # HaarPSI PyTorch
-This is the repository of the HaarPSI PyTorch implementation presented in the papers "A study on the adequacy of common IQA measures for medical images" and "Parameter choices in HaarPSI for IQA with medical images".
+This is the repository of the HaarPSI PyTorch implementation presented in the papers ["A study on the adequacy of common IQA measures for medical images"](https://arxiv.org/abs/2405.19224) and ["Parameter choices in HaarPSI for IQA with medical images"](https://arxiv.org/abs/2410.24098).
 
 ### Highlights:
 1. A full-reference IQA measure with promising performance in several studies.
@@ -27,9 +27,14 @@ If you use this HaarPSI implementation, please cite those two papers:
 
 
 ```
-@misc{karner2024parameter,
+@misc{karner2024parameterchoiceshaarpsiiqa,
       title={Parameter choices in HaarPSI for IQA with medical images}, 
-      author={Clemens Karner, Janek Gröhl, Ian Selby, Judith Babar, Jake Beckford, Thomas R Else, Timothy J Sadler, Shahab Shahipasand, Arthikkaa Thavakumar, Michael Roberts, James H.F. Rudd, Carola-Bibiane Schönlieb, Jonathan R Weir-McCall, Anna Breger},
+      author={Clemens Karner and Janek Gröhl and Ian Selby and Judith Babar and Jake Beckford and Thomas R Else and Timothy J Sadler and Shahab Shahipasand and Arthikkaa Thavakumar and Michael Roberts and James H. F. Rudd and Carola-Bibiane Schönlieb and Jonathan R Weir-McCall and Anna Breger},
+      year={2024},
+      eprint={2410.24098},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2410.24098}, 
 }
 ```
 
