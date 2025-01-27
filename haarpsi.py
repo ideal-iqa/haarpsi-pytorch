@@ -34,7 +34,7 @@ def haarpsi(ref, deg, C, α,preprocess_with_subsampling=True):
                 Range: [5, 100]
             α: float
                 Natural images: 4.2
-                Medical images: 5.8
+                Medical images: 4.9
                 A paramter of the algorithm, which has been experimentally determined for natural and medical image data sets.
                 Range: [2, 8]
         Optional:
