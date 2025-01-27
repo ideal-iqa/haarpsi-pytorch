@@ -42,7 +42,7 @@ If you use this HaarPSI implementation, please cite those two papers:
 
 Tested with:
 * Python 3.11.5
-* Pytorch 2.5.1
+* torch 2.5.1
 
 Example:
 
