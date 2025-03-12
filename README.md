@@ -18,7 +18,6 @@ If you use this HaarPSI implementation, please cite those two papers:
       title={A study on the adequacy of common IQA measures for medical images}, 
       author={Anna Breger and Clemens Karner and Ian Selby and Janek Gröhl and Sören Dittmer and Edward Lilley and Judith Babar and Jake Beckford and Timothy J Sadler and Shahab Shahipasand and Arthikkaa Thavakumar and Michael Roberts and Carola-Bibiane Schönlieb},
       year={2024},
-      pages={accepted},
       eventtitle={Medical Imaging and Computer-Aided Diagnosis (MICAD) 2024},
       series={Springer Lecture Notes in Electrical Engineering},
       venue={Manchester, UK}
