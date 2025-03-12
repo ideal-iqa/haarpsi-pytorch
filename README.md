@@ -27,7 +27,7 @@ If you use this HaarPSI implementation, please cite those two papers:
 
 
 ```
-@inproceedings{karner2024parameterchoiceshaarpsiiqa,
+@inproceedings{karner2025parameterchoiceshaarpsiiqa,
       title={Parameter choices in HaarPSI for IQA with medical images}, 
       author={Clemens Karner and Janek Gröhl and Ian Selby and Judith Babar and Jake Beckford and Thomas R Else and Timothy J Sadler and Shahab Shahipasand and Arthikkaa Thavakumar and Michael Roberts and James H. F. Rudd and Carola-Bibiane Schönlieb and Jonathan R Weir-McCall and Anna Breger},
       booktitle={2025 IEEE International Symposium on Biomedical Imaging (ISBI)},
