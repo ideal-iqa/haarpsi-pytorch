@@ -12,7 +12,7 @@ C=5
 
 #  Choose the parameter alpha in the range [2,8], suggested values:
 #  Natural images: 4.2
-#  Medical images: 5.8
+#  Medical images: 4.9
 Alpha=5.8
 
 (Similarity_score, Local_similarity, Weights)=haarpsi(ImgA,ImgB,C,Alpha)
