@@ -11,7 +11,7 @@ ImgB=torch.ones(100, 100)
 C=5
 
 #  Choose the parameter alpha in the range [2,8], suggested values:
-#  Natural images: 4,2
+#  Natural images: 4.2
 #  Medical images: 5.8
 Alpha=5.8
 
