@@ -5,7 +5,7 @@ Converted by Sören Dittmer, Clemens Karner and Anna Breger (through project FWF
 
 Please note that this implementation requires images scaled to [0,1], while the original implementation expects images with image values in [0,255].
 
-Last update: 29.10.2024
+Last update: 5.5.2025
 """
 
 
@@ -18,15 +18,15 @@ def haarpsi(ref, deg, C, α,preprocess_with_subsampling=True):
             ref: torch.Tensor
                 The reference image, can be an RGB or grayscale image with image values scaled to [0,1] 
                 in one of the following formats:
-                    (#samples, #channels, width, height)
-                    (#channels, width, height)
-                    (width, height)
+                    (#samples, #channels, height, width)
+                    (#channels, height, width)
+                    (height, width)
             deg: torch.Tensor
                 The degraded image, can be an RGB or grayscale image with image values scaled to [0,1] 
                 in one of the following formats:
-                    (#samples, #channels, width, height)
-                    (#channels, width, height)
-                    (width, height)
+                    (#samples, #channels, height, width)
+                    (#channels, height, width)
+                    (height, width)
             C: float
                 Natural images: 30
                 Medical images: 5
@@ -78,12 +78,12 @@ def haarpsi(ref, deg, C, α,preprocess_with_subsampling=True):
         deg_i = 0.596 * deg[:, 0, :, :] - 0.274 * deg[:, 1, :, :] - 0.322 * deg[:, 2, :, :]
         ref_q = 0.211 * ref[:, 0, :, :] - 0.523 * ref[:, 1, :, :] + 0.312 * ref[:, 2, :, :]
         deg_q = 0.211 * deg[:, 0, :, :] - 0.523 * deg[:, 1, :, :] + 0.312 * deg[:, 2, :, :]
-        ref_y=ref_y.unsqueeze(0)
-        deg_y=deg_y.unsqueeze(0)
-        ref_i=ref_i.unsqueeze(0)
-        deg_i=deg_i.unsqueeze(0)
-        ref_q=ref_q.unsqueeze(0)
-        deg_q=deg_q.unsqueeze(0)
+        ref_y=ref_y.unsqueeze(1)
+        deg_y=deg_y.unsqueeze(1)
+        ref_i=ref_i.unsqueeze(1)
+        deg_i=deg_i.unsqueeze(1)
+        ref_q=ref_q.unsqueeze(1)
+        deg_q=deg_q.unsqueeze(1)
     else:
         ref_y = ref
         deg_y = deg
