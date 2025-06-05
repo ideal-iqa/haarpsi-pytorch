@@ -48,6 +48,7 @@ def haarpsi(ref, deg, C, α,preprocess_with_subsampling=True):
 
     assert ref.shape == deg.shape, "The images must have the same dimensions"
     assert len(ref.shape) in {2, 3, 4}, "Grayscale and color single images and batches are supported"
+    assert torch.is_tensor(ref) and torch.is_tensor(deg), "The images must be PyTorch tensors"
     assert ref.dtype == torch.float32, "The images must be of type float32"
     assert ref.dtype == deg.dtype, "The images must have the same dtype"
     assert torch.all(ref >= 0) and torch.all(ref <= 1), "The images must be in the range [0, 1]"
